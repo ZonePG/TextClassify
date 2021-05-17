@@ -1,14 +1,17 @@
 from market import app
 from flask import render_template, redirect, url_for, flash
-from market.models import User, classify
+from market.models import User
 from market.forms import RegisterForm, LoginForm, ClassifyForm
 from market import db
 from flask_login import login_user, logout_user, login_required
+from market.TextClassify import classify
+
 
 @app.route('/')
 @app.route('/home')
 def home_page():
     return render_template('home.html')
+
 
 @app.route('/market', methods=['GET', 'POST'])
 @login_required
@@ -17,9 +20,10 @@ def market_page():
     if form.validate_on_submit():
         text = form.text.data
         result = classify(text)
-        flash(f'The following text is classified as "经济"', category='success')
+        flash(f'The following text is classified as "{result}"', category='success')
 
     return render_template('market.html', form=form)
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register_page():
@@ -39,6 +43,7 @@ def register_page():
 
     return render_template('register.html', form=form)
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     form = LoginForm()
@@ -55,9 +60,9 @@ def login_page():
 
     return render_template('login.html', form=form)
 
+
 @app.route('/logout')
 def logout_page():
     logout_user()
     flash("You have been logged out!", category='info')
     return redirect(url_for("home_page"))
-
