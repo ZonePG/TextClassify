@@ -2,9 +2,7 @@
 HFUT Soft Engineering Competition.
 
 ## Requirements
-```
-pip install 
-```
+you may need install some flask components if some error occurs:)
 
 ## How to use
 `cd` Current Directory
@@ -20,4 +18,7 @@ export FLASK_APP=run.py
 export FLASK_DENUG=True
 flask run
 ```
-
+## Reference and Thanks
+- [EasyBert](https://github.com/rsanshierli/EasyBert)
+- [Chinese-Text-Classification-Pytorch](https://github.com/649453932/Chinese-Text-Classification-Pytorch)
+- [Flask Course](https://www.youtube.com/watch?v=Qr4QMBUPxWo)
