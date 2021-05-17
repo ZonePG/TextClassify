@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+    Classify Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please enter the text to be classified
+            </h1>
+            <br>
+            {{ form.text.label() }}
+            {{ form.text(class="form-control", placeholder="Input Content") }}
+
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            <p class="lead font-weight-normal">classified labels includes: "财经", "军事", "体育", etc...</p>
+            <p class="lead font-weight-normal">happy to use:)</p>
+
+        </form>
+    </div>
+</body>
+{% endblock %}
