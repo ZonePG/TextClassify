@@ -12,7 +12,7 @@ set FLASK_APP=run.py
 set FLASK_DENUG=True
 flask run
 ```
-### On Max/Linux 
+### On Mac/Linux 
 ```
 export FLASK_APP=run.py
 export FLASK_DENUG=True
