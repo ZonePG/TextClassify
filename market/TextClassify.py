@@ -184,3 +184,6 @@ if __name__ == '__main__':
         '《金牌喜剧班》神秘开场学员直面导师灵魂拷问 “班级大考”谁是人气No.1',
         '题电影系列项目包括一部献礼院线电影《我和我的奥运》和多部奥运城市影片《我的奥运，我的城》。启动仪式现场。活扬光大，进而对中国人的生活、工作、城市新时代精神面貌进行全景式呈现，传递奥运精神的同时，传播新时代中国声音。']
     predict(test)
+    from openpyxl import load_workbook
+    xlsx = input("Please input xlsx file name(example: test.xlsx): ")
+    print(xlsx)
