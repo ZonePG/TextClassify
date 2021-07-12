@@ -9,8 +9,12 @@ pip3 install -r requirements.txt
 ```
 
 ## 对数据集进行预测测试
-`cd market` 进入 market 文件夹运行`python3 test.py`，输入待测试的xlsx文件，输出为填充好的`output.xlsx`，均设置在market路径下
-这里，我们已经将测试文件`test_data.xlsx`放入了market文件夹，
+`cd market` 进入 market 文件夹运行`python3 test.py`，
+
+输入待测试的xlsx文件，输出为填充好的`output.xlsx`，这里均设置在market路径下
+
+我们已经将测试文件`test_data.xlsx`放入了market文件夹，
+
 输出文件`output.xlsx`输出在market文件夹中，可以直接查看结果
 
 ## 部署 Web 网站
