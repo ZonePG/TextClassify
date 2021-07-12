@@ -2,7 +2,9 @@
 HFUT Soft Engineering Competition.
 
 ## Requirements
-you may need install some flask components if some error occurs:)
+```
+pip install -r requirements.txt
+```
 
 ## How to use
 `cd` Current Directory
