@@ -2,12 +2,16 @@
 HFUT Soft Engineering Competition.
 
 ## Requirements
+安装项目所需依赖
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
-## How to use
-`cd` Current Directory
+## 对数据集进行预测测试
+`cd market` 进入 market 文件夹运行`python3 test.py`，输入待测试的xlsx文件，输出为填充好的`output.xlsx`，均设置在market路径下
+
+## 部署 Web 网站
+`cd` 到项目主路径
 ### On Windows
 ```
 set FLASK_APP=run.py
@@ -20,6 +24,8 @@ export FLASK_APP=run.py
 export FLASK_DENUG=True
 flask run
 ```
+在网页中输入`http://127.0.0.1:5000/`即可查看在线网页。
+
 ## Reference and Thanks
 - [EasyBert](https://github.com/rsanshierli/EasyBert)
 - [Chinese-Text-Classification-Pytorch](https://github.com/649453932/Chinese-Text-Classification-Pytorch)
